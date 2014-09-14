@@ -1,0 +1,32 @@
+﻿@using Bootstrap;
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top headroom">
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav pull-right">
+                @*                    @if (Model.Navigation != null) {
+<div id="layout-navigation" class="group">
+    @Zone(Model.Navigation)
+</div>
+}*@
+                @DisplayChildren(Model)
+                @*                    <li><a href="/">خانه</a></li>
+                    <li><a href="@Url.Action("Register", "App")">ثبت نام</a></li>
+                    <li><a href="@Url.Action("Pricing", "App")">قیمت گذاری</a></li>
+                    <li><a href="http://paysa.ir/درباره-ما" target="_blank">درباه ما</a></li>
+                    <li><a href="http://paysa.ir/تماس-با-ما" target="_blank">تماس با ما</a></li>
+                    <li><a href="@Url.Action("Forget", "App")">فراموشی اطلاعات</a></li>*@
+            </ul>
+            <div class="navbar-header pull-left">
+                <!-- Button for smallest screens -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="/">
+                    <img src='@Url.Content("http://rodesk.ir/themes/ProgressUsTheme/Content/Images/rodesk-logo.png")' alt="Help Desk روناس تحت سامانه رو-دسک RoDesk"></a>
+            </div>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+<!-- /.navbar -->
+@*@DisplayChildren(Model)*@
+

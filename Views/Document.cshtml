@@ -1,0 +1,137 @@
+﻿@using Orchard.Mvc.Html;
+@using Orchard.UI.Resources;
+@{
+    //RegisterLink(new LinkEntry {Type = "image/x-icon", Rel = "shortcut icon", Href = Url.Content("~/modules/orchard.themes/Content/orchard.ico")});
+    Script.Include("html5.js").UseCondition("lt IE 9").AtHead();
+
+    string title = Convert.ToString(Model.Title);
+    string siteName = Convert.ToString(WorkContext.CurrentSite.SiteName);
+}
+<!DOCTYPE html>
+<html lang="@WorkContext.CurrentCulture" class="static @Html.ClassForPage()">
+<head>
+    <meta charset="utf-8" />
+    <title>@Html.Title(title, siteName)</title>
+    @Display(Model.Head)
+    <script>        (function (d) { d.className = "dyn" + d.className.substring(6, d.className.length); })(document.documentElement);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="http://paysa.ir/">
+    <link rel="shortcut icon" href='@Url.Content("http://rodesk.ir/themes/ProgressUsTheme/Content/Images/ronas-favicon.ico")'>
+
+    <link rel="stylesheet" href='@Url.Content("http://rodesk.ir/themes/ProgressUsTheme/Styles/bootstrap.min.css")'>
+    <link rel="stylesheet" href='@Url.Content("http://rodesk.ir/themes/ProgressUsTheme/Styles/font-awesome.min.css")'>
+    <link  rel="stylesheet" href='@Url.Content("http://rodesk.ir/themes/ProgressUsTheme/Styles/bootstrap-rtl.min.css")'>
+
+    <!-- Custom styles for our template -->
+    <link rel="stylesheet" href='@Url.Content("http://rodesk.ir/themes/ProgressUsTheme/Styles/bootstrap-theme.css")' media="screen" >
+    <link rel="stylesheet" href='@Url.Content("http://rodesk.ir/themes/ProgressUsTheme/Styles/main.css")'>
+
+    <link rel="stylesheet" href='@Url.Content("http://rodesk.ir/themes/ProgressUsTheme/Styles/SiteStyle.css")'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+	<script src='@Url.Content("http://rodesk.ir/themes/ProgressUsTheme/Scripts/html5shiv.js")'></script>
+	<script src='@Url.Content("http://rodesk.ir/themes/ProgressUsTheme/Scripts/respond.min.js")'></script>
+	<![endif]-->
+
+    <script src='@Url.Content("http://rodesk.ir/themes/ProgressUsTheme/Scripts/jquery-1.10.2.min.js")'></script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(["_setAccount", "UA-5604714-10"]);
+        _gaq.push(["_trackPageview"]);
+        (function () {
+            var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+            ga.src = (("https:" == document.location.protocol) ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</head>
+
+<body class="home">
+
+    
+
+    @* Layout (template) is in the Body zone @ the default position (nothing, zero, zilch) *@
+    @Display(Model.Body)
+    @Display(Model.Tail)
+
+    <footer id="footer" class="top-space">
+        <div class="footer1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 widget">
+                        <h3 class="widget-title">تماس با ما</h3>
+                        <div class="widget-body">
+                            <p>
+                                ۰۰۹۸-۲۱-۸۸۹۴۸۳۶۹<br>
+                                <a href="mailto:info@paysa.ir">info@paysa.ir</a><br>
+                                <br>
+                                تهران خیابان انقلاب چهار راه کالج کوچه سعیدی پلاک ۵ طبقه دوم کد پستی ۱۵۹۹۶۱۶۳۱۳
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 widget">
+                        <h3 class="widget-title">دنبال کنید</h3>
+                        <div class="widget-body pull-right">
+                            <p class="follow-me-icons">
+                                <a href="http://paysa.ir/blogs/fp/default.aspx/syndication.axd"><i class="fa fa-rss fa-2"></i></a>
+                                <a href="http://www.linkedin.com/company/paysa"><i class="fa fa-linkedin fa-2"></i></a>
+                                <a href="http://www.facebook.com/pages/paysa/245838308829916"><i class="fa fa-facebook fa-2"></i></a>
+                                <a href="https://plus.google.com/b/117058425684090906639/"><i class="fa fa-google-plus fa-2"></i></a>
+                                <a href="https://twitter.com/fardapardaz"><i class="fa fa-twitter fa-2"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 widget">
+                        <h3 class="widget-title">شرکت پایسا</h3>
+                        <div class="widget-body">
+                            <p>«پایسا» نام اختصاری شرکت «پایدار سامانه افزار» سهامی خاص به شماره ثبت ۴۳۲۸۲۳ می‌باشد. شرکت «پایسا» فعالیتش را در تاریخ ۹۰٫۷٫۱۲ تحت عنوان نام «فردا پرداز» شروع کرد و نهایتاً در تاریخ ۱۳۹۱٫۹٫۲۵ فعالیت خود را با ثبت شرکت سهامی خاص رسمی‌تر کرد. عمده تمرکز فعالیت‌های «پایسا» بر توسعه نرم‌افزارهای سفارش مشتری، تولید محصولات نرم‌افزاری و ارائه خدمات متنوع در زمینه نرم‌افزار، برنامه‌نویسی و اینترنت می‌باشد. شرکت پایسا افتخار دارد فعالیت‌های توسعه نرم‌افزار را با به روزترین استانداردها و حداکثر کیفیت به انجام می‌دهد.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row of widgets -->
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 widget">
+                        <div class="widget-body">
+                            <p class="simplenav">
+                                <a href="/">خانه</a> | 
+								<a href="http://paysa.ir/درباره-ما" target="_blank">درباه ما</a> |
+								<a href="http://paysa.ir/تماس-با-ما" target="_blank">تماس با ما</a> |
+								<a href="@Url.Action("Register", "App")">ثبت نام</a> |
+								<a href="@Url.Action("Pricing", "App")">قیمت گذاری</a> |
+					            <a href="@Url.Action("Forget", "App")">فراموشی اطلاعات</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 widget">
+                        <div class="widget-body">
+                            <p class="text-right">
+                                طراحی و توسعه توسط <a href="http://paysa.ir/" rel="designer">شرکت پایسا</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row of widgets -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+    <script src='@Url.Content("http://rodesk.ir/themes/ProgressUsTheme/Scripts/bootstrap.min.js")'></script>
+    <script src='@Url.Content("http://rodesk.ir/themes/ProgressUsTheme/Scripts/headroom.min.js")'></script>
+    <script src='@Url.Content("http://rodesk.ir/themes/ProgressUsTheme/Scripts/jQuery.headroom.min.js")'></script>
+    <script src='@Url.Content("http://rodesk.ir/themes/ProgressUsTheme/Scripts/template.js")'></script>
+</body>
+</html>
+
+
+
+
+

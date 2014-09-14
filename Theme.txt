@@ -1,0 +1,7 @@
+﻿Name: ProgressUs Theme
+Author: Afshar Mohebbi (based on others works)
+Description: ProgressUs Theme , RTL and based on Bootstrap 
+Version: 1.8
+Tags: Awesome, RTL
+Website: http://paysa.ir
+Zones: Header, Navigation, Featured, BeforeMain, AsideFirst, Messages, BeforeContent, Content, AfterContent, AsideSecond, AfterMain, TripelFirst, TripelSecond, TripelThird, FooterQuadFirst, FooterQuadSecond, FooterQuadThird, FooterQuadFourth, Footer
