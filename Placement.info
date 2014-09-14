@@ -14,4 +14,9 @@
     <Place Parts_Common_Metadata="-"/>
   </Match>
 -->
+
+  <Match Path="/درباره-ما">
+    <Place Parts_Title="-"/>
+    <Place Parts_Common_Metadata="-"/>
+  </Match>
 </Placement>
